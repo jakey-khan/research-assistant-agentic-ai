@@ -14,8 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('saveNoteBtn').addEventListener('click', saveNotes);
 });
 
+// Function to summarize selected text
 async function summarizeText() {
     debugger;
+    console.log("Summarize button clicked");
     try {
         const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
         const scriptResult = await chrome.scripting.executeScript({
