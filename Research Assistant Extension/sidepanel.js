@@ -1,4 +1,7 @@
+
 document.addEventListener("DOMContentLoaded", () => {
+     debugger;
+     console.log("DOM fully loaded and parsed");
     // Load saved notes
     chrome.storage.local.get(['researchNotes'], (result) => {
         if (result.researchNotes) {
