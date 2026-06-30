@@ -1,7 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-     debugger;
-     console.log("DOM fully loaded and parsed");
+     
     // Load saved notes
     chrome.storage.local.get(['researchNotes'], (result) => {
         if (result.researchNotes) {
@@ -16,8 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Function to summarize selected text
 async function summarizeText() {
-    debugger;
-    console.log("Summarize button clicked");
+    
     try {
         const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
         const scriptResult = await chrome.scripting.executeScript({
