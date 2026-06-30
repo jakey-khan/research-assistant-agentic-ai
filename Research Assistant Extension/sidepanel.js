@@ -1,8 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    debugger;
-    console.log('DOM fully loaded and parsed');
-    const suma = '';
+    
     chrome.storage.local.get(['researchNotes'], (result) => {
         if (result.researchNotes) {
             const notesElement = document.getElementById('notes');
@@ -14,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('saveNoteBtn').addEventListener('click', saveNotes);
 });
 
-// Function to summarize selected text
+
 async function summarizeText() {
     
     try {
