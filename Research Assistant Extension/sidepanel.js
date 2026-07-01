@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const result = '';
     debugger;
+    console.log('DOM fully loaded and parsed'); 
     chrome.storage.local.get(['researchNotes'], (result) => {
         if (result.researchNotes) {
             const notesElement = document.getElementById('notes');
