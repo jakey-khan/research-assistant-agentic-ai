@@ -1,7 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    const result = '';
-    
+  
     chrome.storage.local.get(['researchNotes'], (result) => {
         if (result.researchNotes) {
             const notesElement = document.getElementById('notes');
@@ -13,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('saveNoteBtn').addEventListener('click', saveNotes);
 });
 
-// summaraize the selected text on the current page and display the result in the side panel.
+
 async function summarizeText() {
     
     try {
