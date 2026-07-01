@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    const hi = '';
+    
 
     chrome.storage.local.get(['researchNotes'], (result) => {
         if (result.researchNotes) {
