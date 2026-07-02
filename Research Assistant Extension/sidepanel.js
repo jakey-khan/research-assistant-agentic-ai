@@ -1,5 +1,9 @@
+
 document.addEventListener("DOMContentLoaded", () => {
-    // Load saved notes
+   
+    debugger;
+    console.log('DOM fully loaded and parsed'); 
+   
     chrome.storage.local.get(['researchNotes'], (result) => {
         if (result.researchNotes) {
             const notesElement = document.getElementById('notes');
@@ -11,8 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('saveNoteBtn').addEventListener('click', saveNotes);
 });
 
+
 async function summarizeText() {
-    debugger;
+    
     try {
         const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
         const scriptResult = await chrome.scripting.executeScript({
